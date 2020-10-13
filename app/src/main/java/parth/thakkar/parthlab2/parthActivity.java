@@ -2,6 +2,7 @@ package parth.thakkar.parthlab2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,5 +21,13 @@ public class parthActivity extends AppCompatActivity {
 
         companyLogo = findViewById(R.id.companyLogo);
         enterButton = findViewById(R.id.enterButton);
+
+        enterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(parthActivity.this, thakkarSecondScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 }
